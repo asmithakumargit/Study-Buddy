@@ -1,0 +1,97 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F0F4FF 0%, #FFF0F5 100%);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.chat-bubble-user {
+  background: linear-gradient(135deg, #FF6B95 0%, #7000FF 100%);
+  color: white;
+  border-radius: 20px 20px 4px 20px;
+  padding: 12px 16px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.chat-bubble-ai {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1E293B;
+  border-radius: 20px 20px 20px 4px;
+  padding: 12px 16px;
+  max-width: 70%;
+  word-wrap: break-word;
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.file-upload-zone {
+  border: 2px dashed rgba(255, 107, 149, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.file-upload-zone:hover {
+  border-color: #FF6B95;
+  background: rgba(255, 107, 149, 0.1);
+  transform: translateY(-2px);
+}
+
+.tool-button {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.tool-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(255, 107, 149, 0.3);
+}
+
+.tool-button.active {
+  background: linear-gradient(135deg, #FF6B95 0%, #7000FF 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.flashcard {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, rgba(255, 107, 149, 0.1) 0%, rgba(112, 0, 255, 0.1) 100%);
+}

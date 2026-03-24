@@ -1,0 +1,8 @@
+{
+  "name": "study-buddy",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd frontend && npm run start:both",
+    "start": "cd frontend && npm run start:both"
+  }
+}
